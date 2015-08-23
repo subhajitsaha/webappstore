@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{page_title}}</title>
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="bower_components/fontawesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
+    <link href="css/card.css" rel="stylesheet">
+  </head>
+  <body data-ng-app="CardApp">
+    <div data-ng-view>
+      <div class="loading">Loading..</div>
+    </div>
+    <div>
+      {{>github_fork_ribbon}}
+    </div>
+    <!-- Scripts -->
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
