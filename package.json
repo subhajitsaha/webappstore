@@ -6,7 +6,8 @@
   "repository": "",
   "author": "Subhajit <ssjit2010@gmail.com>",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "postinstall": "bower install"
   },
   "dependencies": {
     "body-parser": "^1.13.2",
