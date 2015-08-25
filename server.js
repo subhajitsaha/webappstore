@@ -16,9 +16,9 @@ app.set('port', process.env.PORT || 3000, process.env.IP || "0.0.0.0");
 app.set('view engine', 'mustache');
 app.set('views', __dirname + '/views');
 app.set('card_detail_url', 'ec2-52-27-92-14.us-west-2.compute.amazonaws.com');
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(bodyParser.json()); // for parsing application/json
-app.use(bodyParser.urlencoded({ extended: true })); // for parsing application/x-www-form-urlencoded
+app.use(express.static(path.join(__dirname, 'build')));
+app.use(bodyParser.json());//for parsing application/json
+app.use(bodyParser.urlencoded({extended: true}));//for parsing application/x-www-form-urlencoded
 
 // Functions
 function sendResponse(err, result, resp){
