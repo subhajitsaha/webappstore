@@ -1,0 +1,14 @@
+body {
+  font: 100% Helvetica, sans-serif;
+  color: #333;
+  font-size: 14px; }
+
+.box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  text-align: center; }
+  .box .box-bordered {
+    border: 1px solid #ddd; }

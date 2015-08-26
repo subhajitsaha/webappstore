@@ -1,10 +1,2 @@
-.box {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100px;
-    height: 100px;
-    text-align: center;
-    font-size: 14px;
-    line-height: 30px;
-}
+body{font:100% Helvetica,sans-serif;color:#333;font-size:14px}.box{position:absolute;top:0;left:0;width:100px;height:100px;text-align:center}.box .box-bordered{border:1px solid #ddd}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIm1haW4uY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBLEtBQ0UsS0FBTSxLQUFLLFVBQVcsV0FDdEIsTUFBTyxLQUNQLFVBQVcsS0FFYixLQUNFLFNBQVUsU0FDVixJQUFLLEVBQ0wsS0FBTSxFQUNOLE1BQU8sTUFDUCxPQUFRLE1BQ1IsV0FBWSxPQUNaLG1CQUNFLE9BQVEsSUFBSSxNQUFNIiwiZmlsZSI6Im1haW4uY3NzIiwic291cmNlc0NvbnRlbnQiOlsiYm9keSB7XG4gIGZvbnQ6IDEwMCUgSGVsdmV0aWNhLCBzYW5zLXNlcmlmO1xuICBjb2xvcjogIzMzMztcbiAgZm9udC1zaXplOiAxNHB4OyB9XG5cbi5ib3gge1xuICBwb3NpdGlvbjogYWJzb2x1dGU7XG4gIHRvcDogMDtcbiAgbGVmdDogMDtcbiAgd2lkdGg6IDEwMHB4O1xuICBoZWlnaHQ6IDEwMHB4O1xuICB0ZXh0LWFsaWduOiBjZW50ZXI7IH1cbiAgLmJveCAuYm94LWJvcmRlcmVkIHtcbiAgICBib3JkZXI6IDFweCBzb2xpZCAjZGRkOyB9XG4iXSwic291cmNlUm9vdCI6Ii9zb3VyY2UvIn0= */

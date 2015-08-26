@@ -1,9 +1,11 @@
 var gulp = require('gulp'),
+    sourcemaps = require('gulp-sourcemaps'),
     clean = require('gulp-clean'),
     jshint = require('gulp-jshint'),
     uglify  = require('gulp-uglify'),
     csslint = require('gulp-csslint'),
     sass = require('gulp-sass'),
+    minifyCss = require('gulp-minify-css'),
     changed = require('gulp-changed'),
     imagemin = require('gulp-imagemin'),
     minifyHTML = require('gulp-minify-html');
@@ -28,6 +30,16 @@ gulp.task('csslint', function() {
 gulp.task('scss', function () {
     gulp.src('./src/scss/*.scss')
         .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('./src/css'));
+});
+
+//CSS minify
+gulp.task('css', function () {
+    gulp.run('scss');
+    gulp.src('./src/css/*.css')
+        .pipe(sourcemaps.init())
+        .pipe(minifyCss())
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest('./build/css'));
 });
 
