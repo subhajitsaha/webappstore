@@ -8,7 +8,7 @@
     "url": "git@github.com:subhajitsaha/webappstore.git"
   },
   "author": "Subhajit <ssjit2010@gmail.com>",
-  "cacheDirectories": ["node_modules", "bower_components"],
+  "cacheDirectories": ["node_modules","bower_components"],
   "scripts": {
     "start": "node server.js",
     "postinstall": "bower install"
