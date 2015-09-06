@@ -11,8 +11,8 @@ var gulp = require('gulp'),
     minifyHTML = require('gulp-minify-html');
     
 //JS task
-gulp.task('js', function() {
-    gulp.src(['./src/js/*.js', './routes/*.js'])
+gulp.task('build-js', function() {
+    gulp.src('./src/js/*.js')
         .pipe(jshint())
         .pipe(jshint.reporter('default'))
         //.pipe(uglify())
@@ -26,25 +26,19 @@ gulp.task('csslint', function() {
         .pipe(csslint.reporter());
 });
 
-//SASS
-gulp.task('scss', function () {
+//SCSS to CSS and minify
+gulp.task('build-css', function () {
     gulp.src('./src/scss/*.scss')
-        .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./src/css'));
-});
-
-//CSS minify
-gulp.task('css', function () {
-    gulp.run('scss');
-    gulp.src('./src/css/*.css')
         .pipe(sourcemaps.init())
-        .pipe(minifyCss())
+        .pipe(sass().on('error', sass.logError))
         .pipe(sourcemaps.write())
+        .pipe(gulp.dest('./src/css'))
+        .pipe(minifyCss())
         .pipe(gulp.dest('./build/css'));
 });
 
 //Minify new images
-gulp.task('imagemin', function() {
+gulp.task('build-image', function() {
     var imgSrc = './src/img/**/*',
         imgDst = './build/img';
     gulp.src(imgSrc)
@@ -54,7 +48,7 @@ gulp.task('imagemin', function() {
 });
 
 //Minify new or changed HTML pages
-gulp.task('htmlpage', function() {
+gulp.task('build-html', function() {
     var htmlSrc = './src/templates/*.html',
         htmlDst = './build/templates';
     gulp.src(htmlSrc)
@@ -63,6 +57,10 @@ gulp.task('htmlpage', function() {
         .pipe(gulp.dest(htmlDst));
 });
 
-gulp.task('default', ['htmlpage', 'js', 'scss', 'csslint', 'imagemin'], function () {
-    console.log('Build Done.');
+//Watch task
+gulp.task('default',function() {
+    gulp.watch('./src/scss/*.scss', ['build-css']);
+    gulp.watch('./src/js/*.js', ['build-js']);
+    gulp.watch('./src/img/**/*', ['build-image']);
+    gulp.watch('./src/templates/*.html', ['build-html']);
 });

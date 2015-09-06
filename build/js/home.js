@@ -5,6 +5,7 @@
    var delta = 20;
    
    el.style.left = '0px';
+   el.style.top = '10px';
    el.style.backgroundColor = getRandomColor();
    
    function moveIt () {
