@@ -11,7 +11,7 @@
   "cacheDirectories": ["node_modules","bower_components"],
   "scripts": {
     "start": "node server.js",
-    "postinstall": "bower install"
+    "postinstall": "bower --version"
   },
   "dependencies": {
     "body-parser": "^1.13.2",
