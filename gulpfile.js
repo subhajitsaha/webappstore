@@ -64,3 +64,6 @@ gulp.task('default',function() {
     gulp.watch('./src/img/**/*', ['build-image']);
     gulp.watch('./src/templates/*.html', ['build-html']);
 });
+
+//Build task
+gulp.task('build', ['build-js', 'build-css', 'build-image', 'build-html']);

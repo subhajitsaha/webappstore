@@ -1,6 +1,4 @@
-##Web Apps Store
-
-[![Build Status](https://travis-ci.org/subhajitsaha/webappstore.svg)](https://travis-ci.org/subhajitsaha/webappstore)
+##Web Apps Store[![Build Status](https://travis-ci.org/subhajitsaha/webappstore.svg)](https://travis-ci.org/subhajitsaha/webappstore)
 
 This hosts a bunch of web apps.
 
