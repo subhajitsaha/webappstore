@@ -29,9 +29,9 @@ gulp.task('csslint', function() {
 //SCSS to CSS and minify
 gulp.task('build-css', function () {
     gulp.src('./src/scss/*.scss')
-        .pipe(sourcemaps.init())
+        //.pipe(sourcemaps.init())
         .pipe(sass().on('error', sass.logError))
-        .pipe(sourcemaps.write())
+        //.pipe(sourcemaps.write())
         .pipe(gulp.dest('./src/css'))
         .pipe(minifyCss())
         .pipe(gulp.dest('./build/css'));
@@ -58,12 +58,12 @@ gulp.task('build-html', function() {
 });
 
 //Watch task
-gulp.task('default',function() {
-    gulp.watch('./src/scss/*.scss', ['build-css']);
-    gulp.watch('./src/js/*.js', ['build-js']);
-    gulp.watch('./src/img/**/*', ['build-image']);
-    gulp.watch('./src/templates/*.html', ['build-html']);
-});
+//gulp.task('default',function() {
+//    gulp.watch('./src/scss/*.scss', ['build-css']);
+//    gulp.watch('./src/js/*.js', ['build-js']);
+//    gulp.watch('./src/img/**/*', ['build-image']);
+//    gulp.watch('./src/templates/*.html', ['build-html']);
+//});
 
 //Build task
 gulp.task('build', ['build-js', 'build-css', 'build-image', 'build-html']);

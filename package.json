@@ -8,10 +8,9 @@
     "url": "git@github.com:subhajitsaha/webappstore.git"
   },
   "author": "Subhajit <ssjit2010@gmail.com>",
-  "cacheDirectories": ["node_modules","bower_components"],
   "scripts": {
     "start": "node server.js",
-    "postinstall": "bower --version"
+    "postinstall": "bower install && gulp build"
   },
   "dependencies": {
     "body-parser": "1.13.2",
@@ -19,7 +18,8 @@
     "consolidate": "0.13.1",
     "express": "4.13.0",
     "multer": "0.1.8",
-    "mustache": "2.1.2"
+    "mustache": "2.1.2",
+    "gulp": "3.9.0"
   },
   "devDependencies": {
     "gulp": "3.9.0",
